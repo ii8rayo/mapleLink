@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - MapleLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Header Styling */
+        header {
+            background-color: #003d7d;
+            color: white;
+        }
+
+        header a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        /* Hover Effect for Services */
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover .card-title {
+            color: #003d7d !important;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #003d7d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="h2">MapleLink</a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="signup.html" class="nav-link">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <section class="text-center mb-5">
+                <h1 class="text-primary" style="color: #003d7d;">Explore The Digital Services</h1>
+                <p class="text-secondary">Effortlessly manage tasks with our innovative, paperless, and queue-free solutions.</p>
+            </section>
+
+            <section class="row gy-4">
+                <div class="col-md-4">
+                    <a href="immigration_and_citizenship.html" class="text-decoration-none">
+                        <div class="card h-100 shadow service-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Immigration & Citizenship</h5>
+                                <p class="card-text">Track visa and residency applications, renew PR cards, and streamline immigration processes online.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="veichls.html" class="text-decoration-none">
+                        <div class="card h-100 shadow service-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Driver's License & Vehicle Services</h5>
+                                <p class="card-text">Renew your driver's license, register vehicles, and pay fines securely online without queues.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow service-card" data-bs-toggle="modal" data-bs-target="#workingModal">
+                        <div class="card-body">
+                            <h5 class="card-title">Birth & Death Certificates</h5>
+                            <p class="card-text">Apply for and renew birth or death certificates seamlessly through our platform.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow service-card" data-bs-toggle="modal" data-bs-target="#workingModal">
+                        <div class="card-body">
+                            <h5 class="card-title">Healthcare Access</h5>
+                            <p class="card-text">Issue / Renew health cards, access vaccination records, and stay informed about your medical history.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow service-card" data-bs-toggle="modal" data-bs-target="#workingModal">
+                        <div class="card-body">
+                            <h5 class="card-title">Future Services</h5>
+                            <p class="card-text">Looking ahead: municipal utilities, permit applications, and more digital solutions coming soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="text-white text-center py-3">
+        <p class="mb-0">© 2025 MapleLink. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="workingModal" tabindex="-1" aria-labelledby="workingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="workingModalLabel" style="color: #003d7d;">Feature Under Development</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    We are still working on this feature. Try Immigration and Citizenship or Driver's License & Vehicle Services instead.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

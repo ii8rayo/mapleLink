@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Fines - MapleLink</title>
+    <link rel="stylesheet" href="pay_fines.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">MapleLink</a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <h1>Pay Your Fines Securely</h1>
+            <p>Quickly resolve your fines with our safe and efficient payment platform.</p>
+        </section>
+
+        <section class="fine-form-container">
+            <form id="fine-form" class="fine-form">
+                <div class="form-group">
+                    <label for="ticket-number">Ticket Number:</label>
+                    <input type="text" id="ticket-number" placeholder="Enter your ticket number" required>
+                </div>
+                <div class="form-group">
+                    <label for="license-plate">License Plate:</label>
+                    <input type="text" id="license-plate" placeholder="Enter your vehicle's license plate" required>
+                </div>
+                <button type="submit" class="submit-button">Check Fine</button>
+            </form>
+        </section>
+
+        <!-- Fine Details Section -->
+        <section id="fine-details" class="fine-details hidden">
+            <h2>Fine Details</h2>
+            <p><strong>Ticket Number:</strong> <span id="ticket"></span></p>
+            <p><strong>License Plate:</strong> <span id="plate"></span></p>
+            <p><strong>Fine Amount:</strong> <span id="amount">$200</span></p>
+            <button class="pay-button">Pay Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 MapleLink. All rights reserved.</p>
+    </footer>
+
+    <script src="pay_fines.js"></script>
+</body>
+</html>

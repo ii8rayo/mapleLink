@@ -1,0 +1,223 @@
+/* === About Page Specific Styles === */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+/* === Header === */
+header {
+    display: flex; /* Arrange logo and navigation in a row */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+    background-color: #0056a1; /* Header background */
+    padding: 1rem 2rem; /* Space around the header */
+    color: #fff; /* Text color */
+}
+
+header .logo a {
+    font-size: 1.8rem; /* Larger font for logo */
+    font-weight: bold;
+    color: #fff; /* White logo text */
+    text-decoration: none; /* Remove underline */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Arrange menu items horizontally */
+    gap: 1.5rem; /* Space between menu items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Standard font size */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth hover transition */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffd700; /* Highlighted color (gold) */
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+/* === About Page Main Content === */
+
+/* About Intro Section */
+.about-intro {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    text-align: center; /* Center text */
+}
+
+.about-intro h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about-intro p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* About Vision Section */
+.about-vision {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+.about-vision h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.about-vision ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.about-vision ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.about-vision ul li strong {
+    color: #007BFF; /* Highlighted text color */
+}
+
+/* About Community Impact Section */
+.about-community {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+.about-community h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.about-community ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.about-community ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.about-community ul li strong {
+    color: #28a745; /* Green to highlight positive impacts */
+}
+
+/* About Environment Section */
+.about-environment {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+.about-environment h2 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.about-environment ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.about-environment ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.about-environment ul li strong {
+    color: #e67e22; /* Orange to highlight environmental impacts */
+}
+
+/* Image Styling */
+.about-image {
+    width: 40%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0056a1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-intro, .about-vision, .about-community, .about-environment {
+        padding: 20px;
+    }
+
+    .about-intro h1 {
+        font-size: 2em;
+    }
+
+    .about-vision h2, .about-community h2, .about-environment h2 {
+        font-size: 1.8em;
+    }
+
+    .about-vision ul li, .about-community ul li, .about-environment ul li {
+        font-size: 1em;
+    }
+
+    .about-image {
+        width: 70%; /* Adjust image width on smaller screens */
+    }
+}

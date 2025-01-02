@@ -1,0 +1,291 @@
+/* === General Styles === */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, modern font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent padding and margin calculations */
+    background-color: #f9f9f9; /* Light background for a clean look */
+    color: #333; /* Neutral text color */
+}
+
+/* === Header === */
+header {
+    display: flex; /* Arrange logo and navigation in a row */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+    background-color: #0056a1; /* Header background */
+    padding: 1rem 2rem; /* Space around the header */
+    color: #fff; /* Text color */
+}
+
+header .logo a {
+    font-size: 1.8rem; /* Larger font for logo */
+    font-weight: bold;
+    color: #fff; /* White logo text */
+    text-decoration: none; /* Remove underline */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Arrange menu items horizontally */
+    gap: 1.5rem; /* Space between menu items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Standard font size */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth hover transition */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffd700; /* Highlighted color (gold) */
+}
+
+/* === About Section === */
+.about-section {
+    text-align: center; /* Center the content */
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Neutral text color */
+}
+
+.about-section h1 {
+    font-size: 2rem;
+    color: #0056a1; /* Matches the theme */
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.5; /* Improve readability */
+    max-width: 800px; /* Limit width for better focus */
+    margin: 0 auto; /* Center align text block */
+}
+
+
+/* Navigation menu styles */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the menu items */
+    margin: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 1rem; /* Space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* White text color for links */
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline; /* Highlight the active page */
+}
+
+/* === Hero Section (index.html) === */
+.hero {
+    background-color: #e8f5ff; /* Soft blue background for emphasis */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Subtle divider */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Large heading for the hero section */
+    color: #0056a1;
+}
+
+.hero p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #555; /* Slightly lighter text color for descriptions */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #0056a1; /* Primary button color */
+    color: #fff; /* White text for contrast */
+    border-radius: 5px; /* Rounded corners for modern design */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #003d7d; /* Darker shade for hover effect */
+}
+
+/* === Auth Forms (signup.html, login.html) === */
+.auth-form {
+    max-width: 400px; /* Limit the width of the form */
+    margin: 2rem auto; /* Center the form horizontally and vertically */
+    padding: 2rem;
+    background: #fff; /* White form background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left;
+}
+
+.auth-form h2 {
+    text-align: center; /* Center the form title */
+    margin-bottom: 1.5rem;
+    color: #0056a1; /* Form title matches the theme */
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem; /* Space below the label */
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%; /* Full-width input fields */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded input fields */
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.auth-form button {
+    width: 100%; /* Full-width button */
+    padding: 0.75rem;
+    background-color: #0056a1; /* Button matches primary theme */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #003d7d; /* Darker hover color */
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-switch a {
+    color: #0056a1; /* Link matches theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline; /* Highlight on hover */
+}
+
+/* === Footer === */
+footer {
+    background-color: #0056a1; /* Footer matches header */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* === Discover Canada Section === */
+.discover-canada {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Neutral text color */
+}
+
+.discover-canada h2 {
+    font-size: 2rem;
+    color: #0056a1; /* Title matches the theme */
+    margin-bottom: 1rem;
+}
+
+/* Card Slider Styles */
+.card-slider {
+    display: flex;
+    align-items: center; /* Center the slider vertically */
+    justify-content: center; /* Center the cards horizontally */
+    overflow: hidden; /* Hide overflowing cards */
+    position: relative; /* Required for button positioning */
+    margin-top: 1rem;
+}
+
+.slider-container {
+    display: flex; /* Arrange cards in a row */
+    transition: transform 0.5s ease; /* Smooth sliding effect */
+    gap: 1rem; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+.card {
+    flex: 0 0 200px; /* Set fixed width for cards */
+    background: #fff; /* White card background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.card img {
+    width: 100%; /* Full width of the card */
+    height: 120px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and crop */
+}
+
+.card p {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0056a1; /* Text matches theme */
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background: #0056a1; /* Button color matches theme */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.prev-btn {
+    left: 1rem; /* Add space from left side */
+}
+
+.next-btn {
+    right: 1rem; /* Add space from right side */
+}
+
+.slider-btn:hover {
+    background: #003d7d; /* Darker shade on hover */
+}

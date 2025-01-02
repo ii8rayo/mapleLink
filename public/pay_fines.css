@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #003d7d;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.navigation a.active {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #003d7d;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Form Section */
+.fine-form-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fine-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #003d7d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056a1;
+}
+
+/* Fine Details */
+.fine-details {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fine-details.hidden {
+    display: none;
+}
+
+.fine-details h2 {
+    font-size: 1.8rem;
+    color: #003d7d;
+}
+
+.fine-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.pay-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pay-button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #003d7d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}

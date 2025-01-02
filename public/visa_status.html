@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration and Citizenship</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black; /* Set background color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo a  {
+            text-decoration: none;
+            color:#0056a1;
+            font-size: 2em;
+        }
+
+        /* Main Content */
+        main {
+            width: 80%;
+            max-width: 1200px; /* Limit max width for larger screens */
+            margin: 40px auto;
+        }
+
+        /* === Immigration and Citizenship Section === */
+
+        .immigration-section {
+            background-color: #fff;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .immigration-section h2 {
+            font-size: 2.5rem;
+            color: #0056a1;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .immigration-section p {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        }
+
+        /* Form Styling */
+        .visa-status-form .form-row {
+            justify-content: center;
+        }
+
+        .visa-status-form .form-control {
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .visa-status-form .btn {
+            font-size: 1rem;
+            padding: 10px;
+            background-color: #0056a1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .visa-status-form .btn:hover {
+            background-color: #004080;
+        }
+
+        /* Progress Bar Styling */
+        .status-bar {
+            margin-top: 20px;
+        }
+
+        .progress {
+            height: 20px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            font-size: 1rem;
+            color: #fff;
+            background-color: #0056a1;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .status-bar .progress-bar {
+            font-size: 1rem;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        /* Forms and Document Checklist */
+        .document-checklist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .document-checklist ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .document-checklist ul li a {
+            color: #0056a1;
+            text-decoration: none;
+        }
+
+        .document-checklist ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0056a1;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<body>
+    <!-- Header -->
+    <header class="text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="text-white text-decoration-none h2">MapleLink</a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="signup.html" class="nav-link">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4" style="color: var(--primary-color);">Visa Status Tracking</h1>
+        <p class="text-center text-muted">Track your visa application status easily and stay informed at every step.</p>
+
+        <!-- Visa Status Tracker -->
+        <section class="card p-4 mb-5">
+            <h3 class="card-title text-center" style="color: var(--primary-color);">Track Your Visa Status</h3>
+            <form id="statusForm" class="text-center">
+                <div class="mb-3">
+                    <label for="applicationNumber" class="form-label">Visa Application Number</label>
+                    <input type="text" class="form-control w-50 mx-auto" id="applicationNumber" placeholder="Enter your application number" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Track Status</button>
+            </form>
+        </section>
+
+        <!-- Result Section -->
+        <section id="resultSection" class="result-container mb-5">
+            <h3 class="text-center" style="color: var(--primary-color);">Visa Application Status</h3>
+            <div class="card p-4">
+                <h5 class="card-title" id="visaStatusTitle">Your application status will appear here.</h5>
+                <p class="card-text" id="visaStatusDetails">We will provide updates here based on the status of your application.</p>
+            </div>
+        </section>
+
+        <!-- Status Timeline -->
+        <section id="timelineSection" class="progress-container card p-4 mb-5">
+            <h3 class="text-center" style="color: var(--primary-color);">Visa Status Timeline</h3>
+            <div class="progress" style="height: 30px;">
+                <div id="statusBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Status</div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="text-center" style="color: var(--primary-color);">Forms & Documents</h3>
+            <ul class="list-group">
+                <!-- Provide the path to the form you want to be downloaded -->
+                <li class="list-group-item">
+                    <a href="path_to_your_files/application_form.pdf" class="text-decoration-none" download>
+                        Application Form for Visa
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="path_to_your_files/document_checklist.pdf" class="text-decoration-none" download>
+                        Document Checklist
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="path_to_your_files/passport_copy_guidelines.pdf" class="text-decoration-none" download>
+                        Passport Copy Guidelines
+                    </a>
+                </li>
+            </ul>
+        </section>        
+
+        <!-- FAQ Section -->
+        <section class="mb-5">
+            <h3 class="text-center" style="color: var(--primary-color);">Frequently Asked Questions (FAQ)</h3>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How do I check the status of my visa application?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Simply enter your visa application number in the tracking section above to view the status.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What should I do if my application is still under review?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            If your application is under review, you will be notified via email with updates. In the meantime, ensure all your documents are up-to-date.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqThree">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How long does it take to process a visa?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The processing time varies depending on the type of visa you applied for. It typically takes 2-8 weeks.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="mb-5">
+            <h3 class="text-center" style="color: var(--primary-color);">Contact Information</h3>
+            <p class="text-center">If you need further assistance, please feel free to contact us:</p>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Email:</strong> support@maplelink.ca</li>
+                <li class="list-group-item"><strong>Phone:</strong> 1-800-123-4567</li>
+                <li class="list-group-item"><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2025 MapleLink. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript for handling form submission and displaying the status
+        document.getElementById('statusForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const applicationNumber = document.getElementById('applicationNumber').value;
+
+            // Example of visa status based on application number (you can replace with actual logic)
+            let visaStatus = 'Under Review'; // This could be dynamic based on actual data
+            let statusMessage = '';
+            let progressWidth = 0;
+
+            // Example of status logic (can be replaced with actual API or data)
+            if (applicationNumber === '0') {
+                visaStatus = 'Approved';
+                statusMessage = 'Your visa application has been approved! we will contact you';
+                progressWidth = 100; // Full progress
+
+            } else if (applicationNumber === '1') {
+                visaStatus = 'Rejected';
+                statusMessage = 'Your visa application has been Rejected! check your email';
+                progressWidth = 100 ; // Full progress
+
+            } else if (applicationNumber === '2') {
+                visaStatus = 'Under Review';
+                statusMessage = 'Your application is currently being reviewed.';
+                progressWidth = 50; // Mid progress
+
+            } else {
+                visaStatus = 'Received';
+                statusMessage = 'Your application has been received and is awaiting review.';
+                progressWidth = 25; // Low progress
+            }
+
+            // Show the result section and update the content dynamically
+            document.getElementById('visaStatusTitle').innerText = visaStatus;
+            document.getElementById('visaStatusDetails').innerText = statusMessage;
+            document.getElementById('resultSection').style.display = 'block';
+            document.getElementById('timelineSection').style.display = 'block';
+
+            // Update progress bar width based on the status
+            document.getElementById('statusBar').style.width = progressWidth + '%';
+            document.getElementById('statusBar').innerText = visaStatus;
+        });
+    </script>
+</body>
+</html>

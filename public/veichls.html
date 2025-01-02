@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles Services - MapleLink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">MapleLink</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="services.html" class="hover:underline">Services</a></li>
+                    <li><a href="about.html" class="hover:underline">About</a></li>
+                    <li><a href="login.html" class="hover:underline">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-100 py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-blue-800">Driver's License & Vehicle Services</h1>
+            <p class="mt-4 text-lg text-blue-700">Simplify your driver's license renewals, vehicle registrations, and fine payments.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container mx-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" data-target="under-development">
+                <h2 class="text-xl font-semibold text-blue-800">Renew Driver's License</h2>
+                <p class="mt-2 text-gray-600">Easily renew your driver's license without the hassle of long queues.</p>
+                <button class="mt-4 bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed">Coming Soon</button>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" data-target="under-development">
+                <h2 class="text-xl font-semibold text-blue-800">Vehicle Registration</h2>
+                <p class="mt-2 text-gray-600">Register your vehicle online quickly and securely.</p>
+                <button class="mt-4 bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed">Coming Soon</button>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <h2 class="text-xl font-semibold text-blue-800">Pay Fines</h2>
+                <p class="mt-2 text-gray-600">Pay your traffic fines and tickets without delays.</p>
+                <a href="pay_fines.html" class="mt-4 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 block text-center">Pay Now</a>
+            </div>
+
+            <!-- Under Construction Cards -->
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" data-target="under-development">
+                <h2 class="text-xl font-semibold text-blue-800">Vehicle Transfer</h2>
+                <p class="mt-2 text-gray-600">Coming soon: Transfer ownership of vehicles online.</p>
+                <button class="mt-4 bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed">Coming Soon</button>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" data-target="under-development">
+                <h2 class="text-xl font-semibold text-blue-800">Inspection Scheduling</h2>
+                <p class="mt-2 text-gray-600">Coming soon: Schedule vehicle inspections online.</p>
+                <button class="mt-4 bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed">Coming Soon</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white text-center py-4">
+        <p>© 2025 MapleLink. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Modal-like alert for under-development services
+        document.querySelectorAll('[data-target="under-development"]').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('This service is still under development. Try Pay Fines service.');
+            });
+        });
+    </script>
+</body>
+</html>
